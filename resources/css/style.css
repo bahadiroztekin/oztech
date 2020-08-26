@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase; 
+}
+
+h1{
+ margin-top: 0;
+ margin-bottom: 20px;  
+ color: #fff;   
+ font-size: 240%;
+ word-spacing: 4px;
+ letter-spacing: 1px;     
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;  
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #ff3838;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.6s, border 0.6s, color 0.6s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #ff3838;
+    border: 1px solid #ff3838;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #ff3838;
+    color: #ff3838;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #ff0505;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #ff0505;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #ff0505;
+    color: #fff;
+}
+
+.logo {
+    height: 87px;
+    width: auto;
+    float: left;
+    border-radius: 200px;
+    margin-top: 20px;
+}
+
+.logo-small {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    border-radius: 200px;
+    margin: 5px 0;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.6s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #ff3838;
+}
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(6, 14, 33, 0.98);
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #fff;
+    padding: 17px 0;
+}
+
+.sticky .logo {display: none; }
+.sticky .logo-small { display: block; }
+
+section {
+    padding: 80px 0;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+.box{
+    padding: 1%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.icon-big {
+    display: block;
+    font-size: 350%;
+    color: #ff3838;
+    margin-bottom: 10px;
+}
+
+.section-products {
+    padding: 0;
+}
+
+.products-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.products-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.product-photo {
+    width: 100%;
+    margin 0;
+}
+
+.product-photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.product-photo img:hover {
+    transform: scale(1.03);
+}
+
+.steps-box:first-child {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.steps-box:last-child {
+    margin-top: 110px;
+}
+
+.app-screen {
+    width: 70%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step div {
+    color: #ff3838;
+    border: 2px solid #ff3838;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+
+.btn-app img:hover {
+    transform: scale(1.03);
+}
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
+.section-cities {
+    background-color: #f4f4f4;
+}
+
+.box img {
+    width:100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #ff3838;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+a:link,
+a:visited {
+    color: #ff3838;
+    text-decoration: none;
+    border-bottom: 1px solid #ff3838;
+    padding-bottom: 1px;
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.product-box img {
+    height: 200px;
+    width: auto;
+}
+
+.section-best-sellers {
+    background-color: #f4f4f4;
+}
+
+.product-box {
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #fff;
+}
+
+.product-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.product-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: #ff3838;
+}
+
+.product-box ul {
+    list-style: none;
+}
+
+.product-box ul li {
+    padding: 5px 0;
+}
+
+.product-box div:last-child {
+    text-align: center;
+}
+
+.product-box div:first-child {
+    text-align: center;
+}
+
+.sign-up-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email] {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+footer {
+    background-color: #060e21;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ff3838;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram,
+.ion-social-youtube {
+    transition: color 0.3s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #55acee;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #e95950;
+}
+
+.ion-social-youtube:hover {
+    color: #ff0000;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
